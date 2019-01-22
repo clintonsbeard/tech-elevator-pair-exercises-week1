@@ -15,15 +15,20 @@ public class MakeChange {
 
 	public static void main(String[] args) {
 		
-		Scanner in = new Scanner (System.in);
+		while (true) {
+			
+			Scanner in = new Scanner (System.in);
 		
-			System.out.println("Please enter the amount of the bill: ");
+			System.out.print("Please enter the amount of the bill: ");
 			double amountOfTheBill = in.nextDouble();
 			
-			System.out.println("Please enter the amount tendered: ");
+			System.out.print("Please enter the amount tendered: ");
 			double amountOfTender = in.nextDouble();
 
-			System.out.println("The change required is: $" + (amountOfTender - amountOfTheBill));
-	}
+			double amountOfChange = amountOfTender - amountOfTheBill;
+			System.out.printf("The change required is: $%3.2f", amountOfChange);
+			System.out.println("");
+			}
+		}
 
 }
